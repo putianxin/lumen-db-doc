@@ -1,0 +1,50 @@
+{
+    "name": "ptx/lumen-dev-db-doc",
+    "type": "library",
+    "description": "引入ddoc，自动读取数据库字典",
+    "keywords": [
+        "Lumen",
+        "ptx",
+        "DBDoc"
+    ],
+    "homepage": "https://github.com/putianxin/lumen-db-doc.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ptx",
+            "email": "putianxin@vip.qq.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "5.0.x|5.1.x|5.2.x|5.3.x|5.4.x||5.5.x|5.6.*",
+        "php" : "~5.6|~7.0|~7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~4.0||~5.0",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jormin\\DDoc\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jormin\\DDoc\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
