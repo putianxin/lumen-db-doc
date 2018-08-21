@@ -1,5 +1,5 @@
 {
-    "name": "ptx/lumen-dev-db-doc",
+    "name": "ptx/lumen-db-doc",
     "type": "library",
     "description": "引入ddoc，自动读取数据库字典",
     "keywords": [
